@@ -13,6 +13,7 @@ html {
 body {
     width: 100%;
     height: 100%;
+    background-color: black;
     
     /* NB ALLA FINE AGGIUNGI QUI BACKGROUND COLOR BLACK */
 }
@@ -153,6 +154,8 @@ main {
     color: white;
 }
 
+/* TOPBAR */
+
 #topbar {
     width: 90%;
     margin: 0 auto;
@@ -160,6 +163,7 @@ main {
     justify-content: space-between;
     background-color: black;
     color: white;
+    margin-bottom: 1em;
 }
 
 .selector {
@@ -209,4 +213,27 @@ main {
     padding: .6em;
     border: 1px solid white;
 }
+
+/* CAROUSEL */
+
+#carousel-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+#carousel-container h2 {
+    margin-bottom: .7em;
+}
+
+.carousel-inner .carousel-item {
+    display: flex;
+    
+}
+
+.carousel-item > div {
+    padding-right: .5em;
+}
+
+
 
