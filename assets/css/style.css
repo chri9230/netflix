@@ -18,16 +18,38 @@ body {
     /* NB ALLA FINE AGGIUNGI QUI BACKGROUND COLOR BLACK */
 }
 
+@media screen and (max-width: 576px){
+    .nav-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-item .dropdown.nav-link:hover + .dropdown-menu {
+            right: 0;
+            left: auto;
+    }
+
+    .nav-right .nav-item:hover .dropdown-menu {
+            display: none;
+    }
+
+    .selector {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
 /* HEADER */
 header {
     background-color: black;
     color: white;
     padding-left: 2em;
-    padding-right: 3em;
+    padding-right: 2em;
 }
 
 nav {
     width: 100%;
+    margin-bottom: .6em;
 }
 
 .nav-item.dropdown {
@@ -63,7 +85,7 @@ nav {
 }
 
 .icon {
-    height: 70px;
+    height: 50px;
     padding: 1em;
 }
 
@@ -101,12 +123,9 @@ nav {
     margin-right: .5em;
 }
 
-
-
-
  .nav-right .user-img {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
  }    
 
  .caret {
@@ -178,7 +197,7 @@ main {
 .selector {
     display: flex;
     align-items: center;
-    
+    justify-content: flex-start;
 }
 
 .selector h1 {
@@ -196,13 +215,24 @@ main {
 
 .dropdown-menu {
     --bs-dropdown-link-color: none;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    padding: 0;
 }
 
-.selector ul {
+ ul li {
+    padding: 0;
     background-color: black;
 }
 
-.selector ul li {
+.nav-item ul:hover {
+    background-color: white;
+    color: black;
+}
+
+ ul li {
     color: white;
     
 }
@@ -210,6 +240,7 @@ main {
 .genres {
     padding: 0;
     border: 1px solid white;
+    
 }
 
 .icon-view {
@@ -221,6 +252,7 @@ main {
 .icon-view svg {
     padding: .6em;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 /* CAROUSEL */
@@ -244,5 +276,108 @@ main {
     padding-right: .5em;
 }
 
+.carousel-item img {
+    transition: linear .3s;
+}
+
+.carousel-inner {
+    
+    padding: 2em;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    border: 1px solid white;
+    /* overflow: scroll; */
+}
+
+.carousel-control-prev {
+    left: -7%;
+    top: 20%;
+}
+
+.carousel-control-prev-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.carousel-control-next {
+    right: -7%;
+    top: 20%;
+}
+
+.carousel-control-next-icon {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    height: 100vh;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+footer ul li {
+    list-style: none;
+    color: #808080;
+    padding-bottom: 1.5em;
+    font-size: 13px;
+}
+
+
+.top-footer {
+    margin: 1em 0 1em 0;
+    width: 100%;
+}
+
+.top-footer svg {
+    fill: #808080;
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 766px) {
+    footer {
+        text-align: center;
+    }
+    .top-footer {
+        display: flex;
+        justify-content: center;
+    } 
+    
+    
+}
+
+.btn-service button {
+    background-color: transparent;
+    color: #808080;
+    border: 1px solid #808080;
+    font-size: 13px;
+    padding: .5em;
+    margin-bottom: 1em;
+    transition: linear .5s;
+}
+
+.btn-service button:hover {
+    background-color: white;
+    color: black;
+}
+
+.net-data p {
+    color: #808080;
+    font-size: 13px;
+    padding: .5em;
+}
 
 
