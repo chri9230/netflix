@@ -39,6 +39,7 @@ body {
     }
 }
 
+
 /* HEADER */
 header {
     background-color: black;
@@ -54,6 +55,7 @@ nav {
 
 .nav-item.dropdown {
     display: flex;
+    min-width: 84px;
 }
 
 .nav-list {
@@ -116,7 +118,7 @@ nav {
 }
 
 #search-icon img {
-    height: 40px;
+    height: 30px;
 }
 
 .nav-right img {
@@ -263,6 +265,15 @@ main {
     padding-bottom: 2em;
 }
 
+.selected-area {
+    opacity: .5;
+    transition: opacity .4s;
+}
+
+.selected-area:hover {
+    opacity: 1;
+}
+
 #carousel-container h2 {
     margin-bottom: .7em;
 }
@@ -379,5 +390,10 @@ footer ul li {
     font-size: 13px;
     padding: .5em;
 }
+
+#search-icon {
+    cursor: pointer;
+}
+
 
 
